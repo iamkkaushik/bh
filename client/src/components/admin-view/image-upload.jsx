@@ -50,7 +50,7 @@ function ProductImageUpload({
     const data = new FormData();
     data.append("my_file", imageFile);
     const response = await axios.post(
-      "https://bh-ten.vercel.app/api/admin/products/upload-image",
+      "https://bh-server-ib7d.onrender.com/api/admin/products/upload-image",
       data
     );
     console.log(response, "response");
