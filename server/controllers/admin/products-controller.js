@@ -28,6 +28,7 @@ const addProduct = async (req, res) => {
       title,
       description,
       category,
+      // subcategory, // Added subcategory
       brand,
       price,
       salePrice,
@@ -42,6 +43,7 @@ const addProduct = async (req, res) => {
       title,
       description,
       category,
+      // subcategory, // Added subcategory
       brand,
       price,
       salePrice,
@@ -81,6 +83,39 @@ const fetchAllProducts = async (req, res) => {
   }
 };
 
+// Fetch all products with optional filtering
+// const fetchAllProducts = async (req, res) => {
+//   try {
+//     // Destructure category and subcategory from query parameters
+//     const { category, subcategory } = req.query;
+
+//     // Create a filter object based on the presence of query parameters
+//     const filter = {};
+//     if (category) {
+//       filter.category = category; // Add category filter if provided
+//     }
+//     if (subcategory) {
+//       filter.subcategory = subcategory; // Add subcategory filter if provided
+//     }
+
+//     // Fetch products based on filter
+//     const listOfProducts = await Product.find(filter);
+    
+//     res.status(200).json({
+//       success: true,
+//       data: listOfProducts,
+//     });
+//   } catch (e) {
+//     console.log(e);
+//     res.status(500).json({
+//       success: false,
+//       message: "Error occurred",
+//     });
+//   }
+// };
+
+
+
 //edit a product
 const editProduct = async (req, res) => {
   try {
@@ -90,6 +125,7 @@ const editProduct = async (req, res) => {
       title,
       description,
       category,
+      // subcategory, // Added subcategory
       brand,
       price,
       salePrice,
@@ -107,6 +143,7 @@ const editProduct = async (req, res) => {
     findProduct.title = title || findProduct.title;
     findProduct.description = description || findProduct.description;
     findProduct.category = category || findProduct.category;
+    // findProduct.subcategory = subcategory || findProduct.subcategory; // Update subcategory
     findProduct.brand = brand || findProduct.brand;
     findProduct.price = price === "" ? 0 : price || findProduct.price;
     findProduct.salePrice =

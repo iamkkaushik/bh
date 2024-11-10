@@ -30,22 +30,66 @@ import { addToCart, fetchCartItems } from "@/store/shop/cart-slice";
 import { useToast } from "@/components/ui/use-toast";
 import ProductDetailsDialog from "@/components/shopping-view/product-details";
 import { getFeatureImages } from "@/store/common-slice";
+import bannerImage from "@/assets/banner-1.webp";
+// import bannerImage from "../../assets/banner.webp";
 
 const categoriesWithIcon = [
-  { id: "men", label: "Men", icon: ShirtIcon },
-  { id: "women", label: "Women", icon: CloudLightning },
+  { id: "plates", label: "Plates", icon: bannerImage},
+  { id: "glasses", label: "Glasses", icon: CloudLightning },
   { id: "kids", label: "Kids", icon: BabyIcon },
   { id: "accessories", label: "Accessories", icon: WatchIcon },
   { id: "footwear", label: "Footwear", icon: UmbrellaIcon },
 ];
 
+// const categoriesWithIcon = [
+//   { 
+//     id: "plates", 
+//     label: "Plates", 
+//     icon: bannerImage,
+//     subcategories: ["Dinner Plates", "Salad Plates", "Dessert Plates", "Charger Plates"]
+//   },
+//   { 
+//     id: "glasses", 
+//     label: "Glasses", 
+//     icon: CloudLightning,
+//     subcategories: ["Wine Glasses", "Water Glasses", "Champagne Flutes", "Cocktail Glasses"]
+//   },
+//   { 
+//     id: "kids", 
+//     label: "Kids", 
+//     icon: BabyIcon,
+//     subcategories: ["Plates", "Cups", "Utensils", "Lunch Boxes"]
+//   },
+//   { 
+//     id: "accessories", 
+//     label: "Accessories", 
+//     icon: WatchIcon,
+//     subcategories: ["Napkin Rings", "Placemats", "Coasters", "Serving Utensils"]
+//   },
+//   { 
+//     id: "footwear", 
+//     label: "Footwear", 
+//     icon: UmbrellaIcon,
+//     subcategories: ["Kitchen Shoes", "Outdoor Dining Slippers", "Anti-Slip Socks"]
+//   },
+// ];
+
 const brandsWithIcon = [
-  { id: "nike", label: "Nike", icon: Shirt },
-  { id: "adidas", label: "Adidas", icon: WashingMachine },
+  { id: "sarda", label: "Sarda", icon: Shirt },
+  { id: "rr", label: "RR", icon: WashingMachine },
   { id: "puma", label: "Puma", icon: ShoppingBasket },
   { id: "levi", label: "Levi's", icon: Airplay },
   { id: "zara", label: "Zara", icon: Images },
   { id: "h&m", label: "H&M", icon: Heater },
+];
+
+const materialWithIcon = [
+  { id: "biodegradable", label: "Bio-Degradable", icon: Shirt },
+  { id: "conventionalplastic ", label: "Conventional Plastics ", icon: WashingMachine },
+  { id: "wood", label: "Wood", icon: ShoppingBasket },
+  { id: "aluminum", label: "Aluminum", icon: Airplay },
+  { id: "palmleaf", label: "Palm Leaf", icon: Images },
+  { id: "foam", label: "Foam", icon: Heater },
 ];
 function ShoppingHome() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -175,7 +219,12 @@ function ShoppingHome() {
                 className="cursor-pointer hover:shadow-lg transition-shadow"
               >
                 <CardContent className="flex flex-col items-center justify-center p-6">
-                  <categoryItem.icon className="w-12 h-12 mb-4 text-primary" />
+                  <img
+                    src={categoryItem.icon}
+                    alt={categoryItem.label}
+                    className="w-full h-40 object-cover"
+                  />
+                  {/* <categoryItem.icon className="w-12 h-12 mb-4 text-primary" /> */}
                   <span className="font-bold">{categoryItem.label}</span>
                 </CardContent>
               </Card>
@@ -203,6 +252,26 @@ function ShoppingHome() {
         </div>
       </section>
 
+      <section className="py-12 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-8">Shop by Product Material</h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            {materialWithIcon.map((brandItem) => (
+              <Card
+                onClick={() => handleNavigateToListingPage(brandItem, "brand")}
+                className="cursor-pointer hover:shadow-lg transition-shadow"
+              >
+                <CardContent className="flex flex-col items-center justify-center p-6">
+                  <brandItem.icon className="w-12 h-12 mb-4 text-primary" />
+                  <span className="font-bold">{brandItem.label}</span>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* const displayedProducts = productList?.slice(0, 10) || []; */}
       <section className="py-12">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-8">

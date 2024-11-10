@@ -19,7 +19,7 @@ const commonFeatureRouter = require("./routes/common/feature-routes");
 //create a separate file for this and then import/use that file here
 
 mongoose
-  .connect("db_url")
+  .connect("mongodb+srv://kaushikkodarapu10:LOkxw0GNlhB3TNWj@cluster1.gjdudq3.mongodb.net/?retryWrites=true&w=majority&appName=Cluster1")
   .then(() => console.log("MongoDB connected"))
   .catch((error) => console.log(error));
 
@@ -57,3 +57,6 @@ app.use("/api/shop/review", shopReviewRouter);
 app.use("/api/common/feature", commonFeatureRouter);
 
 app.listen(PORT, () => console.log(`Server is now running on port ${PORT}`));
+
+
+
