@@ -55,7 +55,7 @@ export const deleteProduct = createAsyncThunk(
   "/products/deleteProduct",
   async (id) => {
     const result = await axios.delete(
-      https://bh-ten.vercel.app/api/admin/products/delete/${id}`
+      `https://bh-ten.vercel.app/api/admin/products/delete/${id}`
     );
 
     return result?.data;
