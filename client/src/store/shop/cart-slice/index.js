@@ -10,7 +10,7 @@ export const addToCart = createAsyncThunk(
   "cart/addToCart",
   async ({ userId, productId, quantity }) => {
     const response = await axios.post(
-      "https://bh-ten.vercel.app/api/shop/cart/add",
+      "https://bh-server-ib7d.onrender.com/api/shop/cart/add",
       {
         userId,
         productId,
@@ -26,7 +26,7 @@ export const fetchCartItems = createAsyncThunk(
   "cart/fetchCartItems",
   async (userId) => {
     const response = await axios.get(
-      `https://bh-ten.vercel.app/api/shop/cart/get/${userId}`
+      `https://bh-server-ib7d.onrender.com/api/shop/cart/get/${userId}`
     );
 
     return response.data;
@@ -37,7 +37,7 @@ export const deleteCartItem = createAsyncThunk(
   "cart/deleteCartItem",
   async ({ userId, productId }) => {
     const response = await axios.delete(
-      `https://bh-ten.vercel.app/api/shop/cart/${userId}/${productId}`
+      `https://bh-server-ib7d.onrender.com/api/shop/cart/${userId}/${productId}`
     );
 
     return response.data;
@@ -48,7 +48,7 @@ export const updateCartQuantity = createAsyncThunk(
   "cart/updateCartQuantity",
   async ({ userId, productId, quantity }) => {
     const response = await axios.put(
-      "https://bh-ten.vercel.app/api/shop/cart/update-cart",
+      "https://bh-server-ib7d.onrender.com/api/shop/cart/update-cart",
       {
         userId,
         productId,
