@@ -30,13 +30,13 @@ app.use(
   cors({
     origin: true,
     methods: ["GET", "POST", "DELETE", "PUT"],
-    allowedHeaders: [
-      "Content-Type",
-      "Authorization",
-      "Cache-Control",
-      "Expires",
-      "Pragma",
-    ],
+    // allowedHeaders: [
+    //   "Content-Type",
+    //   "Authorization",
+    //   "Cache-Control",
+    //   "Expires",
+    //   "Pragma",
+    // ],
     credentials: true,
   })
 );
