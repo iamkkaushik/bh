@@ -292,71 +292,123 @@ export const materialOptionsMap = {
 
 export const filterOptions = {
   category: [
-    { 
-      id: "plates", 
-      label: "Plates",
-      // subcategories: [
-      //   { id: "dinner-plates", label: "Dinner Plates" },
-      //   { id: "salad-plates", label: "Salad Plates" },
-      //   { id: "dessert-plates", label: "Dessert Plates" },
-      //   { id: "charger-plates", label: "Charger Plates" }
-      // ]
-    },
-    { 
-      id: "glasses", 
-      label: "Glasses",
-      // subcategories: [
-      //   { id: "wine-glasses", label: "Wine Glasses" },
-      //   { id: "water-glasses", label: "Water Glasses" },
-      //   { id: "champagne-flutes", label: "Champagne Flutes" },
-      //   { id: "cocktail-glasses", label: "Cocktail Glasses" }
-      // ]
-    },
-    { 
-      id: "kids", 
-      label: "Kids",
-      // subcategories: [
-      //   { id: "kids-plates", label: "Plates" },
-      //   { id: "kids-cups", label: "Cups" },
-      //   { id: "kids-utensils", label: "Utensils" },
-      //   { id: "lunch-boxes", label: "Lunch Boxes" }
-      // ]
-    },
-    { 
-      id: "accessories", 
-      label: "Accessories",
-      // subcategories: [
-      //   { id: "napkin-rings", label: "Napkin Rings" },
-      //   { id: "placemats", label: "Placemats" },
-      //   { id: "coasters", label: "Coasters" },
-      //   { id: "serving-utensils", label: "Serving Utensils" }
-      // ]
-    },
-    { 
-      id: "footwear", 
-      label: "Footwear",
-      // subcategories: [
-      //   { id: "kitchen-shoes", label: "Kitchen Shoes" },
-      //   { id: "outdoor-dining-slippers", label: "Outdoor Dining Slippers" },
-      //   { id: "anti-slip-socks", label: "Anti-Slip Socks" }
-      // ]
-    },
+    // { 
+    //   id: "plates", 
+    //   label: "Plates",
+    //   // subcategories: [
+    //   //   { id: "dinner-plates", label: "Dinner Plates" },
+    //   //   { id: "salad-plates", label: "Salad Plates" },
+    //   //   { id: "dessert-plates", label: "Dessert Plates" },
+    //   //   { id: "charger-plates", label: "Charger Plates" }
+    //   // ]
+    // },
+    // { 
+    //   id: "glasses", 
+    //   label: "Glasses",
+    //   // subcategories: [
+    //   //   { id: "wine-glasses", label: "Wine Glasses" },
+    //   //   { id: "water-glasses", label: "Water Glasses" },
+    //   //   { id: "champagne-flutes", label: "Champagne Flutes" },
+    //   //   { id: "cocktail-glasses", label: "Cocktail Glasses" }
+    //   // ]
+    // },
+    // { 
+    //   id: "kids", 
+    //   label: "Kids",
+    //   // subcategories: [
+    //   //   { id: "kids-plates", label: "Plates" },
+    //   //   { id: "kids-cups", label: "Cups" },
+    //   //   { id: "kids-utensils", label: "Utensils" },
+    //   //   { id: "lunch-boxes", label: "Lunch Boxes" }
+    //   // ]
+    // },
+    // { 
+    //   id: "accessories", 
+    //   label: "Accessories",
+    //   // subcategories: [
+    //   //   { id: "napkin-rings", label: "Napkin Rings" },
+    //   //   { id: "placemats", label: "Placemats" },
+    //   //   { id: "coasters", label: "Coasters" },
+    //   //   { id: "serving-utensils", label: "Serving Utensils" }
+    //   // ]
+    // },
+    // { 
+    //   id: "footwear", 
+    //   label: "Footwear",
+    //   // subcategories: [
+    //   //   { id: "kitchen-shoes", label: "Kitchen Shoes" },
+    //   //   { id: "outdoor-dining-slippers", label: "Outdoor Dining Slippers" },
+    //   //   { id: "anti-slip-socks", label: "Anti-Slip Socks" }
+    //   // ]
+    // },
+      { id: "alfa", label: "Alfa" },
+      { id: "benxon", label: "Benxon" },
+      { id: "bio bowls", label: "Bio bowls" },
+      { id: "bio plates", label: "Bio plates" },
+      { id: "bio spoons", label: "bio spoons" },
+      { id: "buffet plates", label: "Buffet Plates" },
+      { id: "wisposable wearable", label: "Disposable Wearable" },
+      { id: "fuel tins", label: "Fuel tins" },
+      { id: "garbage bags", label: "Garbage bags" },
+      { id: "golden cups", label: "Golden cups" },
+      { id: "housekeping items", label: "Housekeping items" },
+      { id: "meal tray", label: "Meal tray" },
+      { id: "menu board", label: "Menu board" },
+      { id: "milky carry bags", label: "Milky carry bags" },
+      { id: "muffin cups", label: "Muffin cups" },
+      { id: "next level cups", label: "Next Level Cups" },
+      { id: "paper cups", label: "Paper Cups" },
+      { id: "paper plate", label: "Paper plete" },
+      { id: "plastic container", label: "Plastic container" },
+      { id: "plastic cups", label: "Plastic cups" },
+      { id: "poly cover", label: "Poly cover" },
+      { id: "pouch", label: "Pouch" },
+      { id: "ripple glass", label: "Ripple glass" },
+      { id: "rolls", label: "Rolls" },
+      { id: "seal bag", label: "Seal bag" },
+      { id: "silver plates", label: "silver plates" },
+      { id: "spoons", label: "Spoons" },
+      { id: "straws", label: "Straws" },
+      { id: "thermocol", label: "Thermocol" },
+      { id: "tissues", label: "Tissues" },
+      { id: "wine glass", label: "Glasses" },
+      { id: "wooden products", label: "Wooden products" },
   ],
   brand: [
-    { id: "sarda", label: "Sarda" },
-    { id: "rr", label: "RR" },
-    { id: "puma", label: "Puma" },
-    { id: "levi", label: "Levi's" },
-    { id: "zara", label: "Zara" },
-    { id: "vardhaman", label: "Vardhaman" },
+      { id: "bhadra", label: "Bhadra" },
+      { id: "sarda", label: "Sarda" },
+      { id: "sd", label: "S.D" },
+      { id: "sony", label: "Sony" },
+      { id: "soft", label: "Soft" },
+      { id: "ecopack", label: "Ecopack" },
+      { id: "next level", label: "Next Level" },
+      { id: "classic", label: "Classic" },
+      { id: "vardhaman", label: "Vardhaman" },
+      { id: "jainson", label: "Jainson" },
+      { id: "goodwill", label: "Goodwill" },
+      { id: "rr", label: "RR" },
+      { id: "lotus", label: "Lotus" },
+      { id: "dove", label: "Dove" },
+      { id: "talyx", label: "Kalyx" },
+      { id: "grace", label: "Grace" },
+      { id: "milan", label: "Milan" },
+      { id: "chuk", label: "Chuk" },
+      { id: "paras", label: "Paras" },
+      { id: "alfa", label: "alfa" },
+      { id: "benxon", label: "Benxon" },
+      { id: "greenvale", label: "Greenvale" },
+      { id: "other", label: "other" },
   ],
   material: [
     { id: "biodegradable", label: "Bio-Degradable" },
     { id: "conventionalplastics", label: "Conventional Plastics" },
+    { id: "paper", label: "Paper" },
     { id: "wood", label: "Wood" },
     { id: "aluminum", label: "Aluminum" },
     { id: "palm-leaf", label: "Palm Leaf" },
     { id: "foam", label: "Foam" },
+    { id: "cloth", label: "Cloth" },
+    { id: "others", label: "Others" },
   ],
 };
 
